@@ -10,6 +10,7 @@ const manrope = Manrope({
 });
 const figtree = Figtree({
   variable: "--font-figtree",
+  subsets: ["latin"],
   weight: "400",
 });
 
