@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fjalla_One } from "next/font/google";
 import "./globals.css";
 
+const fjallaOne = Fjalla_One({
+  variable: "--font-fjalla-one",
+  subsets: ["latin"],
+  weight: "400",
+  style: "normal",
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[430px] mx-auto h-screen overflow-y-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} ${fjallaOne.variable} antialiased max-w-[430px] mx-auto h-screen overflow-y-auto`}
       >
         {children}
       </body>
