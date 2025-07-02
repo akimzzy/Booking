@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-white text-black">
+    <div className="py-10 px-5 font-[family-name:var(--font-geist-sans)] bg-white text-black h-full flex flex-col justify-between">
       <main className="">
         <div className="flex flex-col items-center">
           <div className="size-10 bg-black rounded-xl"></div>
@@ -10,6 +10,7 @@ export default function Home() {
           </span>
         </div>
       </main>
+      <div className="p-4 bg-green-200">Hey</div>
       {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
