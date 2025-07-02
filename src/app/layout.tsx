@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${manrope.variable} ${figtree.variable} antialiased bg-white`}
       >
         <div className="flex font-[family-name:var(--font-manrope)] bg-white text-black h-screen min-h-screen w-screen overflow-hidden">
-          <div className="fixed bottom-0 w-screen p-2 bg-white shadow-2xl border-t border-gray-50 left-0 sm:hidden z-50 pb-8 pt-2 flex justify-center">
+          <div className="fixed bottom-0 w-screen p-2 bg-white shadow-2xl border-t border-gray-100 shadow-black/70 left-0 sm:hidden z-50 pb-8 pt-4 flex justify-center">
             <button className="uppercase font-semibold gap-2 text-sm flex items-center justify-center">
               <span className="size-10 bg-black rounded-xl"></span>
               <span className="h-10 bg-black text-white p-4 py-2 flex items-center justify-center">
