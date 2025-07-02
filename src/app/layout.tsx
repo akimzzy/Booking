@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fjalla_One } from "next/font/google";
+import { Geist, Geist_Mono, Fjalla_One, Figtree } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 const fjallaOne = Fjalla_One({
   variable: "--font-fjalla-one",
   subsets: ["latin"],
   weight: "400",
-  style: "normal",
+});
+const figtree = Figtree({
+  variable: "--font-figtree",
+  weight: "400",
 });
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +35,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${fjallaOne.variable} antialiased max-w-[430px] mx-auto h-screen overflow-y-auto`}
+        className={`${fjallaOne.variable} ${figtree.variable} antialiased bg-white`}
       >
-        {children}
+        <div className="flex font-[family-name:var(--font-fjalla-one)] bg-white text-black h-screen min-h-screen w-screen overflow-hidden">
+          <div className="fixed bottom-0 w-screen p-2 bg-white shadow-2xl border-t border-gray-50 left-0 sm:hidden z-50 pb-8 pt-2 flex justify-center">
+            <button className="uppercase font-semibold gap-2 text-sm flex items-center justify-center">
+              <span className="size-10 bg-black rounded-xl"></span>
+              <span className="h-10 bg-black text-white p-4 py-2 flex items-center justify-center">
+                Book us
+              </span>
+              <span className="size-10 bg-black rounded-xl"></span>
+            </button>
+          </div>
+          <main className="flex-1 flex-col flex overflow-hidden">
+            <Suspense>{children}</Suspense>
+          </main>
+        </div>
       </body>
     </html>
   );
