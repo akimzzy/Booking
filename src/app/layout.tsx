@@ -1,25 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fjalla_One, Figtree } from "next/font/google";
+import { Figtree, Manrope } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 
-const fjallaOne = Fjalla_One({
-  variable: "--font-fjalla-one",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   weight: "400",
 });
 const figtree = Figtree({
   variable: "--font-figtree",
   weight: "400",
-});
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -35,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fjallaOne.variable} ${figtree.variable} antialiased bg-white`}
+        className={`${manrope.variable} ${figtree.variable} antialiased bg-white`}
       >
-        <div className="flex font-[family-name:var(--font-fjalla-one)] bg-white text-black h-screen min-h-screen w-screen overflow-hidden">
+        <div className="flex font-[family-name:var(--font-manrope)] bg-white text-black h-screen min-h-screen w-screen overflow-hidden">
           <div className="fixed bottom-0 w-screen p-2 bg-white shadow-2xl border-t border-gray-50 left-0 sm:hidden z-50 pb-8 pt-2 flex justify-center">
             <button className="uppercase font-semibold gap-2 text-sm flex items-center justify-center">
               <span className="size-10 bg-black rounded-xl"></span>
