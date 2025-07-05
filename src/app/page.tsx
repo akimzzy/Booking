@@ -21,14 +21,17 @@ export default function Home() {
         </span>
       </div>
 
-      <div className="mt-4 p-6">
-        <ul className="flex flex-col gap-4">
+      <div className="mt-8 ">
+        <ul className="flex flex-col border border-b-0 text-gray-300 border-dashed">
           {products.map((products) => {
             return (
-              <li key={products.category} className="cursor-pointer">
+              <li
+                key={products.category}
+                className="cursor-pointer border-b p-4 border-dashed"
+              >
                 <div className="flex justify-between items-center">
                   <div className="flex flex-col">
-                    <span className="font-semibold capitalize">
+                    <span className="font-semibold capitalize text-black">
                       {products.category}
                     </span>
                     <span className="text-xs text-gray-600 -mt-0.5">
@@ -36,9 +39,7 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <div className="size-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-400">
-                    <Arrow />
-                  </div>
+                  <Arrow />
                 </div>
               </li>
             );
