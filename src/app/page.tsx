@@ -36,7 +36,7 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <div className="size-7 flex items-center justify-center rounded-full bg-gray-100 text-gray-600">
+                  <div className="size-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-400">
                     <Arrow />
                   </div>
                 </div>
